@@ -24,21 +24,11 @@ void ofApp::setup(){
     radius = 4;
     
     //loadImage
-    myImage.loadImage("/Users/kz/Project/Lab/MasterProgram/visualize/of/of_v0.8.4_osx_release/apps/myApps/beaconvisualiza/img/bg-real.jpg");
-    myProf.loadImage("/Users/kz/Project/Lab/MasterProgram/visualize/of/of_v0.8.4_osx_release/apps/myApps/beaconvisualiza/img/kuzuhara.png");
+    myImage.loadImage("/Users/kz/Project/Lab/MasterProgram/visualize/of/of_v0.8.4_osx_release/apps/myApps/locationVisualizer/img/bg-real.jpg");
+    myProf.loadImage("/Users/kz/Project/Lab/MasterProgram/visualize/of/of_v0.8.4_osx_release/apps/myApps/locationVisualizer/img/child-girl.png");
 
     //load csv file
-    csv.loadFile(ofToDataPath("/Users/kz/Project/Lab/MasterProgram/visualize/of/of_v0.8.4_osx_release/apps/myApps/beaconvisualiza/data/09_18_2014.csv"));
-//        csv.loadFile(ofToDataPath("/Users/kz/Project/Lab/MasterProgram/visualize/of/of_v0.8.4_osx_release/apps/myApps/beaconvisualiza/data/dump.csv"));
-    //show info of loaded csv file
-//    cout << "CSV Number aaof Cols" << endl;
-//	cout << csv.numCols << endl;
-//    cout << "CSV Number of Rows" << endl;
-//    cout << csv.numRows << endl;
-//    cout << "Print out a specific CSV value" << endl;
-//    cout << csv.data[1][0] << endl;
-//    cout << "==============================" << endl;
-
+    csv.loadFile(ofToDataPath("/Users/kz/Project/Lab/MasterProgram/visualize/of/of_v0.8.4_osx_release/apps/myApps/locationVisualizer/data/09_18_2014.csv"));
     
 }
 
@@ -103,27 +93,19 @@ void ofApp::draw(){
     ofFill();
     radius = 18;
 
-//    //estimated location
-//    ofSetColor(19, 131, 255, 255);
-//    ofCircle(loc_x*250, loc_y*250, radius);
-
     //estimated location error - depend on CDLocationProximity
     ofSetColor(19, 131, 255, 30);
     ofCircle(loc_x*250, loc_y*250, radius+100);
     
-    //facemark
+    //icon
     ofSetColor(255, 255, 255);
     myProf.draw(loc_x*250 - 50, loc_y*250 - 50, 100 ,100);
-    
     
     //enclose estimated location with white line
     ofSetColor(255, 255, 255);
     ofNoFill();
     ofSetLineWidth(4);
-//    ofCircle(loc_x*250, loc_y*250, radius);
     ofCircle(loc_x*250, loc_y*250, 50);
-
-    
 
 }
 
