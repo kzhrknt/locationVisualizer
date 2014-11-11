@@ -24,21 +24,11 @@ void ofApp::setup(){
     radius = 4;
     
     //loadImage
-    myImage.loadImage("/Users/kz/Project/Lab/MasterProgram/visualize/of/of_v0.8.4_osx_release/apps/myApps/beaconvisualiza/img/bg-real.jpg");
-    myProf.loadImage("/Users/kz/Project/Lab/MasterProgram/visualize/of/of_v0.8.4_osx_release/apps/myApps/beaconvisualiza/img/kuzuhara.png");
+    myImage.loadImage("/Users/kz/Project/Lab/MasterProgram/visualize/of/of_v0.8.4_osx_release/apps/myApps/locationVisualizer/img/bg-real.jpg");
+    myProf.loadImage("/Users/kz/Project/Lab/MasterProgram/visualize/of/of_v0.8.4_osx_release/apps/myApps/locationVisualizer/img/child-girl.png");
 
     //load csv file
-    csv.loadFile(ofToDataPath("/Users/kz/Project/Lab/MasterProgram/visualize/of/of_v0.8.4_osx_release/apps/myApps/beaconvisualiza/data/09_18_2014.csv"));
-//        csv.loadFile(ofToDataPath("/Users/kz/Project/Lab/MasterProgram/visualize/of/of_v0.8.4_osx_release/apps/myApps/beaconvisualiza/data/dump.csv"));
-    //show info of loaded csv file
-//    cout << "CSV Number aaof Cols" << endl;
-//	cout << csv.numCols << endl;
-//    cout << "CSV Number of Rows" << endl;
-//    cout << csv.numRows << endl;
-//    cout << "Print out a specific CSV value" << endl;
-//    cout << csv.data[1][0] << endl;
-//    cout << "==============================" << endl;
-
+    csv.loadFile(ofToDataPath("/Users/kz/Project/Lab/MasterProgram/visualize/of/of_v0.8.4_osx_release/apps/myApps/locationVisualizer/data/09_18_2014.csv"));
     
 }
 
