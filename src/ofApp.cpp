@@ -93,27 +93,19 @@ void ofApp::draw(){
     ofFill();
     radius = 18;
 
-//    //estimated location
-//    ofSetColor(19, 131, 255, 255);
-//    ofCircle(loc_x*250, loc_y*250, radius);
-
     //estimated location error - depend on CDLocationProximity
     ofSetColor(19, 131, 255, 30);
     ofCircle(loc_x*250, loc_y*250, radius+100);
     
-    //facemark
+    //icon
     ofSetColor(255, 255, 255);
     myProf.draw(loc_x*250 - 50, loc_y*250 - 50, 100 ,100);
-    
     
     //enclose estimated location with white line
     ofSetColor(255, 255, 255);
     ofNoFill();
     ofSetLineWidth(4);
-//    ofCircle(loc_x*250, loc_y*250, radius);
     ofCircle(loc_x*250, loc_y*250, 50);
-
-    
 
 }
 
